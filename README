@@ -1,4 +1,4 @@
-Project Overview-
+Project Overview
 
 This project implements an end-to-end Business Intelligence (BI) solution by analyzing the massive ICRISAT District-Level Data (DLD)—a comprehensive historical dataset on Indian agriculture.
 The primary goal was to transform raw, complex time-series data into a clean, model-ready format using SQL, and then create a dynamic, interactive dashboard in Power BI. The final product provides stakeholders with clear, district-level insights into agricultural trends, productivity, and regional disparities, enabling data-driven decisions for resource allocation and policy development.
