@@ -1,0 +1,313 @@
+create database agricultural;
+use agricultural;
+CREATE TABLE `Agri` (
+`Dist_Code` INT,
+`Year` INT,
+`State_Code` INT,
+`State_Name` VARCHAR(100),
+`Dist_Name` VARCHAR(100),
+`RICE_AREA_1000_ha` DOUBLE,
+`RICE_PRODUCTION_1000_tons` DOUBLE,
+`RICE_YIELD_Kg_per_ha` DOUBLE,
+`WHEAT_AREA_1000_ha` DOUBLE,
+`WHEAT_PRODUCTION_1000_tons` DOUBLE,
+`WHEAT_YIELD_Kg_per_ha` DOUBLE,
+`KHARIF_SORGHUM_AREA_1000_ha` DOUBLE,
+`KHARIF_SORGHUM_PRODUCTION_1000_tons` DOUBLE,
+`KHARIF_SORGHUM_YIELD_Kg_per_ha` DOUBLE,
+`RABI_SORGHUM_AREA_1000_ha` DOUBLE,
+`RABI_SORGHUM_PRODUCTION_1000_tons` DOUBLE,
+`RABI_SORGHUM_YIELD_Kg_per_ha` DOUBLE,
+`SORGHUM_AREA_1000_ha` DOUBLE,
+`SORGHUM_PRODUCTION_1000_tons` DOUBLE,
+`SORGHUM_YIELD_Kg_per_ha` DOUBLE,
+`PEARL_MILLET_AREA_1000_ha` DOUBLE,
+`PEARL_MILLET_PRODUCTION_1000_tons` DOUBLE,
+`PEARL_MILLET_YIELD_Kg_per_ha` DOUBLE,
+`MAIZE_AREA_1000_ha` DOUBLE,
+`MAIZE_PRODUCTION_1000_tons` DOUBLE,
+`MAIZE_YIELD_Kg_per_ha` DOUBLE,
+`FINGER_MILLET_AREA_1000_ha` DOUBLE,
+`FINGER_MILLET_PRODUCTION_1000_tons` DOUBLE,
+`FINGER_MILLET_YIELD_Kg_per_ha` DOUBLE,
+`BARLEY_AREA_1000_ha` DOUBLE,
+`BARLEY_PRODUCTION_1000_tons` DOUBLE,
+`BARLEY_YIELD_Kg_per_ha` DOUBLE,
+`CHICKPEA_AREA_1000_ha` DOUBLE,
+`CHICKPEA_PRODUCTION_1000_tons` DOUBLE,
+`CHICKPEA_YIELD_Kg_per_ha` DOUBLE,
+`PIGEONPEA_AREA_1000_ha` DOUBLE,
+`PIGEONPEA_PRODUCTION_1000_tons` DOUBLE,
+`PIGEONPEA_YIELD_Kg_per_ha` DOUBLE,
+`MINOR_PULSES_AREA_1000_ha` DOUBLE,
+`MINOR_PULSES_PRODUCTION_1000_tons` DOUBLE,
+`MINOR_PULSES_YIELD_Kg_per_ha` DOUBLE,
+`GROUNDNUT_AREA_1000_ha` DOUBLE,
+`GROUNDNUT_PRODUCTION_1000_tons` DOUBLE,
+`GROUNDNUT_YIELD_Kg_per_ha` DOUBLE,
+`SESAMUM_AREA_1000_ha` DOUBLE,
+`SESAMUM_PRODUCTION_1000_tons` DOUBLE,
+`SESAMUM_YIELD_Kg_per_ha` DOUBLE,
+`RAPESEED_AND_MUSTARD_AREA_1000_ha` DOUBLE,
+`RAPESEED_AND_MUSTARD_PRODUCTION_1000_tons` DOUBLE,
+`RAPESEED_AND_MUSTARD_YIELD_Kg_per_ha` DOUBLE,
+`SAFFLOWER_AREA_1000_ha` DOUBLE,
+`SAFFLOWER_PRODUCTION_1000_tons` DOUBLE,
+`SAFFLOWER_YIELD_Kg_per_ha` DOUBLE,
+`CASTOR_AREA_1000_ha` DOUBLE,
+`CASTOR_PRODUCTION_1000_tons` DOUBLE,
+`CASTOR_YIELD_Kg_per_ha` DOUBLE,
+`LINSEED_AREA_1000_ha` DOUBLE,
+`LINSEED_PRODUCTION_1000_tons` DOUBLE,
+`LINSEED_YIELD_Kg_per_ha` DOUBLE,
+`SUNFLOWER_AREA_1000_ha` DOUBLE,
+`SUNFLOWER_PRODUCTION_1000_tons` DOUBLE,
+`SUNFLOWER_YIELD_Kg_per_ha` DOUBLE,
+`SOYABEAN_AREA_1000_ha` DOUBLE,
+`SOYABEAN_PRODUCTION_1000_tons` DOUBLE,
+`SOYABEAN_YIELD_Kg_per_ha` DOUBLE,
+`OILSEEDS_AREA_1000_ha` DOUBLE,
+`OILSEEDS_PRODUCTION_1000_tons` DOUBLE,
+`OILSEEDS_YIELD_Kg_per_ha` DOUBLE,
+`SUGARCANE_AREA_1000_ha` DOUBLE,
+`SUGARCANE_PRODUCTION_1000_tons` DOUBLE,
+`SUGARCANE_YIELD_Kg_per_ha` DOUBLE,
+`COTTON_AREA_1000_ha` DOUBLE,
+`COTTON_PRODUCTION_1000_tons` DOUBLE,
+`COTTON_YIELD_Kg_per_ha` DOUBLE,
+`FRUITS_AREA_1000_ha` DOUBLE,
+`VEGETABLES_AREA_1000_ha` DOUBLE,
+`FRUITS_AND_VEGETABLES_AREA_1000_ha` DOUBLE,
+`POTATOES_AREA_1000_ha` DOUBLE,
+`ONION_AREA_1000_ha` DOUBLE,
+`FODDER_AREA_1000_ha` DOUBLE
+);
+LOAD DATA INFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/ICRISAT-District Level Data - ICRISAT-District Level Data.csv'
+INTO TABLE `Agri`
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS
+(
+    `Dist_Code`, `Year`, `State_Code`, `State_Name`, `Dist_Name`, 
+    `RICE_AREA_1000_ha`, `RICE_PRODUCTION_1000_tons`, `RICE_YIELD_Kg_per_ha`, 
+    `WHEAT_AREA_1000_ha`, `WHEAT_PRODUCTION_1000_tons`, `WHEAT_YIELD_Kg_per_ha`, 
+    `KHARIF_SORGHUM_AREA_1000_ha`, `KHARIF_SORGHUM_PRODUCTION_1000_tons`, 
+    `KHARIF_SORGHUM_YIELD_Kg_per_ha`, `RABI_SORGHUM_AREA_1000_ha`, 
+    `RABI_SORGHUM_PRODUCTION_1000_tons`, `RABI_SORGHUM_YIELD_Kg_per_ha`, 
+    `SORGHUM_AREA_1000_ha`, `SORGHUM_PRODUCTION_1000_tons`, `SORGHUM_YIELD_Kg_per_ha`, 
+    `PEARL_MILLET_AREA_1000_ha`, `PEARL_MILLET_PRODUCTION_1000_tons`, 
+    `PEARL_MILLET_YIELD_Kg_per_ha`, `MAIZE_AREA_1000_ha`, `MAIZE_PRODUCTION_1000_tons`, 
+    `MAIZE_YIELD_Kg_per_ha`, `FINGER_MILLET_AREA_1000_ha`, `FINGER_MILLET_PRODUCTION_1000_tons`, 
+    `FINGER_MILLET_YIELD_Kg_per_ha`, `BARLEY_AREA_1000_ha`, `BARLEY_PRODUCTION_1000_tons`, 
+    `BARLEY_YIELD_Kg_per_ha`, `CHICKPEA_AREA_1000_ha`, `CHICKPEA_PRODUCTION_1000_tons`, 
+    `CHICKPEA_YIELD_Kg_per_ha`, `PIGEONPEA_AREA_1000_ha`, `PIGEONPEA_PRODUCTION_1000_tons`, 
+    `PIGEONPEA_YIELD_Kg_per_ha`, `MINOR_PULSES_AREA_1000_ha`, `MINOR_PULSES_PRODUCTION_1000_tons`, 
+    `MINOR_PULSES_YIELD_Kg_per_ha`, `GROUNDNUT_AREA_1000_ha`, `GROUNDNUT_PRODUCTION_1000_tons`, 
+    `GROUNDNUT_YIELD_Kg_per_ha`, `SESAMUM_AREA_1000_ha`, `SESAMUM_PRODUCTION_1000_tons`, 
+    `SESAMUM_YIELD_Kg_per_ha`, `RAPESEED_AND_MUSTARD_AREA_1000_ha`, 
+    `RAPESEED_AND_MUSTARD_PRODUCTION_1000_tons`, `RAPESEED_AND_MUSTARD_YIELD_Kg_per_ha`, 
+    `SAFFLOWER_AREA_1000_ha`, `SAFFLOWER_PRODUCTION_1000_tons`, `SAFFLOWER_YIELD_Kg_per_ha`, 
+    `CASTOR_AREA_1000_ha`, `CASTOR_PRODUCTION_1000_tons`, `CASTOR_YIELD_Kg_per_ha`, 
+    `LINSEED_AREA_1000_ha`, `LINSEED_PRODUCTION_1000_tons`, `LINSEED_YIELD_Kg_per_ha`, 
+    `SUNFLOWER_AREA_1000_ha`, `SUNFLOWER_PRODUCTION_1000_tons`, `SUNFLOWER_YIELD_Kg_per_ha`, 
+    `SOYABEAN_AREA_1000_ha`, `SOYABEAN_PRODUCTION_1000_tons`, `SOYABEAN_YIELD_Kg_per_ha`, 
+    `OILSEEDS_AREA_1000_ha`, `OILSEEDS_PRODUCTION_1000_tons`, `OILSEEDS_YIELD_Kg_per_ha`, 
+    `SUGARCANE_AREA_1000_ha`, `SUGARCANE_PRODUCTION_1000_tons`, `SUGARCANE_YIELD_Kg_per_ha`, 
+    `COTTON_AREA_1000_ha`, `COTTON_PRODUCTION_1000_tons`, `COTTON_YIELD_Kg_per_ha`, 
+    `FRUITS_AREA_1000_ha`, `VEGETABLES_AREA_1000_ha`, `FRUITS_AND_VEGETABLES_AREA_1000_ha`, 
+    `POTATOES_AREA_1000_ha`, `ONION_AREA_1000_ha`, `FODDER_AREA_1000_ha`
+);
+
+UPDATE agri SET `RICE_PRODUCTION_1000_tons` = 0 WHERE `RICE_PRODUCTION_1000_tons` = -1.0;
+UPDATE agri SET `WHEAT_PRODUCTION_1000_tons` = 0 WHERE `WHEAT_PRODUCTION_1000_tons` = -1.0;
+UPDATE agri SET `KHARIF_SORGHUM_PRODUCTION_1000_tons` = 0 WHERE `KHARIF_SORGHUM_PRODUCTION_1000_tons` = -1.0;
+UPDATE agri SET `RABI_SORGHUM_PRODUCTION_1000_tons` = 0 WHERE `RABI_SORGHUM_PRODUCTION_1000_tons` = -1.0;
+UPDATE agri SET `SORGHUM_PRODUCTION_1000_tons` = 0 WHERE `SORGHUM_PRODUCTION_1000_tons` = -1.0;
+UPDATE agri SET `PEARL_MILLET_PRODUCTION_1000_tons` = 0 WHERE `PEARL_MILLET_PRODUCTION_1000_tons` = -1.0;
+UPDATE agri SET `MAIZE_PRODUCTION_1000_tons` = 0 WHERE `MAIZE_PRODUCTION_1000_tons` = -1.0;
+UPDATE agri SET `FINGER_MILLET_PRODUCTION_1000_tons` = 0 WHERE `FINGER_MILLET_PRODUCTION_1000_tons` = -1.0;
+UPDATE agri SET `BARLEY_PRODUCTION_1000_tons` = 0 WHERE `BARLEY_PRODUCTION_1000_tons` = -1.0;
+UPDATE agri SET `CHICKPEA_PRODUCTION_1000_tons` = 0 WHERE `CHICKPEA_PRODUCTION_1000_tons` = -1.0;
+UPDATE agri SET `PIGEONPEA_PRODUCTION_1000_tons` = 0 WHERE `PIGEONPEA_PRODUCTION_1000_tons` = -1.0;
+UPDATE agri SET `MINOR_PULSES_PRODUCTION_1000_tons` = 0 WHERE `MINOR_PULSES_PRODUCTION_1000_tons` = -1.0;
+UPDATE agri SET `GROUNDNUT_PRODUCTION_1000_tons` = 0 WHERE `GROUNDNUT_PRODUCTION_1000_tons` = -1.0;
+UPDATE agri SET `SESAMUM_PRODUCTION_1000_tons` = 0 WHERE `SESAMUM_PRODUCTION_1000_tons` = -1.0;
+UPDATE agri SET `RAPESEED_AND_MUSTARD_PRODUCTION_1000_tons` = 0 WHERE `RAPESEED_AND_MUSTARD_PRODUCTION_1000_tons` = -1.0;
+UPDATE agri SET `SAFFLOWER_PRODUCTION_1000_tons` = 0 WHERE `SAFFLOWER_PRODUCTION_1000_tons` = -1.0;
+UPDATE agri SET `CASTOR_PRODUCTION_1000_tons` = 0 WHERE `CASTOR_PRODUCTION_1000_tons` = -1.0;
+UPDATE agri SET `LINSEED_PRODUCTION_1000_tons` = 0 WHERE `LINSEED_PRODUCTION_1000_tons` = -1.0;
+UPDATE agri SET `SUNFLOWER_PRODUCTION_1000_tons` = 0 WHERE `SUNFLOWER_PRODUCTION_1000_tons` = -1.0;
+UPDATE agri SET `SOYABEAN_PRODUCTION_1000_tons` = 0 WHERE `SOYABEAN_PRODUCTION_1000_tons` = -1.0;
+UPDATE agri SET `OILSEEDS_PRODUCTION_1000_tons` = 0 WHERE `OILSEEDS_PRODUCTION_1000_tons` = -1.0;
+UPDATE agri SET `SUGARCANE_PRODUCTION_1000_tons` = 0 WHERE `SUGARCANE_PRODUCTION_1000_tons` = -1.0;
+UPDATE agri SET `COTTON_PRODUCTION_1000_tons` = 0 WHERE `COTTON_PRODUCTION_1000_tons` = -1.0;
+
+select * from Agri;
+SELECT COUNT(*) FROM Agri;
+
+#Questions
+#1.Year-wise Trend of Rice Production Across States (Top 3)
+SELECT State_Name,round(SUM(RICE_PRODUCTION_1000_tons),0) AS Annual_Rice_Production
+FROM Agri
+GROUP BY
+Year,
+State_Name
+ORDER BY
+Year asc,
+Annual_Rice_Production DESC LIMIT 3;
+
+#2.Top 5 Districts by Wheat Yield Increase Over the Last 5 Years
+
+WITH Yields AS (
+SELECT `Dist_Name`,`WHEAT_YIELD_Kg_per_ha`,`Year`
+FROM Agri
+WHERE `Year` IN (2013, 2017)
+),
+YieldIncrease AS (
+SELECT y_start.`Dist_Name`,
+MAX(CASE WHEN y_start.`Year` = 2017 THEN y_start.`WHEAT_YIELD_Kg_per_ha` END) AS Yield_2017,
+MAX(CASE WHEN y_start.`Year` = 2013 THEN y_start.`WHEAT_YIELD_Kg_per_ha` END) AS Yield_2013,
+(
+MAX(CASE WHEN y_start.`Year` = 2017 THEN y_start.`WHEAT_YIELD_Kg_per_ha` END) - 
+MAX(CASE WHEN y_start.`Year` = 2013 THEN y_start.`WHEAT_YIELD_Kg_per_ha` END)
+) AS Absolute_Yield_Increase
+FROM Yields y_start
+GROUP BY y_start.`Dist_Name`
+HAVING Yield_2017 IS NOT NULL AND Yield_2013 IS NOT NULL AND Yield_2013 > 0
+)
+SELECT `Dist_Name`,
+ROUND(Yield_2017, 0) AS Yield_Kg_per_ha_2017,
+ROUND(Yield_2013, 0) AS Yield_Kg_per_ha_2013,
+ROUND(Absolute_Yield_Increase, 2) AS Yield_Increase_Kg_per_ha
+FROM YieldIncrease
+ORDER BY Absolute_Yield_Increase DESC
+LIMIT 5;
+
+
+#3.States with the Highest Growth in Oilseed Production (5-Year Growth Rate)
+
+WITH StateProduction AS (
+SELECT `State_Name`,`Year`,SUM(`OILSEEDS_PRODUCTION_1000_tons`) AS Annual_Production
+FROM Agri
+WHERE `Year` IN (2013, 2017)
+GROUP BY `State_Name`,`Year`
+),
+GrowthCalculation AS (
+SELECT p_start.`State_Name`,
+ MAX(CASE WHEN p_start.`Year` = 2017 THEN p_start.Annual_Production END) AS Production_2017,
+ MAX(CASE WHEN p_start.`Year` = 2013 THEN p_start.Annual_Production END) AS Production_2013,
+(
+(
+ MAX(CASE WHEN p_start.`Year` = 2017 THEN p_start.Annual_Production END) - 
+ MAX(CASE WHEN p_start.`Year` = 2013 THEN p_start.Annual_Production END)
+ ) / 
+ MAX(CASE WHEN p_start.`Year` = 2013 THEN p_start.Annual_Production END)
+) * 100 AS Growth_Rate_Percentage
+FROM StateProduction p_start
+GROUP BY p_start.`State_Name`
+HAVING Production_2017 IS NOT NULL 
+AND Production_2013 IS NOT NULL 
+AND Production_2013 > 0
+)
+SELECT `State_Name`,
+ROUND(Production_2017, 0) AS Production_1000_tons_2017,
+ROUND(Production_2013, 0) AS Production_1000_tons_2013,
+ROUND(Growth_Rate_Percentage, 2) AS Growth_Rate_Percent
+FROM GrowthCalculation
+ORDER BY Growth_Rate_Percentage DESC
+LIMIT 5;
+
+
+#4.District-wise Correlation Between Area and Production for Major Crops (Rice, Wheat, and Maize)
+
+
+#5.Yearly Production Growth of Cotton in Top 5 Cotton Producing States
+
+WITH TopStates AS (
+SELECT `State_Name` FROM Agri
+GROUP BY `State_Name`
+ORDER BY SUM(`COTTON_PRODUCTION_1000_tons`) DESC
+LIMIT 5
+),
+AnnualProduction AS (
+SELECT t.`State_Name`,t.`Year`,
+SUM(t.`COTTON_PRODUCTION_1000_tons`) AS Current_Production,
+LAG(SUM(t.`COTTON_PRODUCTION_1000_tons`), 1, NULL) OVER (
+PARTITION BY t.`State_Name` ORDER BY t.`Year`
+) AS Previous_Production
+FROM Agri t
+JOIN TopStates ts ON t.`State_Name` = ts.`State_Name`
+GROUP BY t.`State_Name`,t.`Year`
+)
+SELECT `Year`,`State_Name`,ROUND(Current_Production, 0) AS Annual_Production_1000_tons,
+ROUND(((Current_Production - Previous_Production) / Previous_Production) * 100,2) AS Production_Growth_Rate_Percent
+FROM AnnualProduction
+ORDER BY `State_Name` ASC,`Year` ASC LIMIT 5;
+
+
+#6.Districts with the Highest Groundnut Production in 2020
+SELECT `Dist_Name`,
+ROUND(SUM(`GROUNDNUT_PRODUCTION_1000_tons`), 2) AS Total_Groundnut_Production_1000_tons
+FROM Agri
+WHERE `Year` = 2017 AND `GROUNDNUT_PRODUCTION_1000_tons` > 0
+GROUP BY `Dist_Name`
+ORDER BY Total_Groundnut_Production_1000_tons DESC
+LIMIT 5;
+
+
+#7.Annual Average Maize Yield Across All States
+SELECT `Year`,
+ROUND(AVG(`MAIZE_YIELD_Kg_per_ha`), 2) AS Annual_Average_Maize_Yield_Kg_per_ha
+FROM Agri
+GROUP BY `Year`
+ORDER BY `Year` ASC;
+
+
+#8.Total Area Cultivated for Oilseeds in Each State
+
+SELECT `State_Name`,
+ROUND(SUM(`OILSEEDS_AREA_1000_ha`), 2) AS Total_Oilseeds_Area_1000_ha
+FROM Agri
+GROUP BY `State_Name`
+ORDER BY Total_Oilseeds_Area_1000_ha ASC;
+
+#9.Districts with the Highest Rice Yield
+SELECT `Dist_Name`,
+ROUND(AVG(`RICE_YIELD_Kg_per_ha`), 2) AS Average_Rice_Yield_Kg_per_ha
+FROM Agri
+WHERE `RICE_YIELD_Kg_per_ha` > 0 
+GROUP BY `Dist_Name`
+ORDER BY Average_Rice_Yield_Kg_per_ha DESC
+LIMIT 5;
+
+
+#10.Compare the Production of Wheat and Rice for the Top 5 States Over 10 Years
+WITH TopStates AS (
+SELECT `State_Name`
+FROM Agri
+GROUP BY `State_Name`
+ORDER BY 
+SUM(`RICE_PRODUCTION_1000_tons` + `WHEAT_PRODUCTION_1000_tons`) DESC
+LIMIT 5
+),
+YearRange AS (
+SELECT MAX(`Year`) AS MaxYear,
+MAX(`Year`) - 9 AS MinYear
+FROM Agri
+),
+AnnualProduction AS (
+SELECT
+T1.`Year`,
+T1.`State_Name`,
+ROUND(SUM(T1.`RICE_PRODUCTION_1000_tons`), 2) AS Annual_Rice_Production_1000_tons,
+ROUND(SUM(T1.`WHEAT_PRODUCTION_1000_tons`), 2) AS Annual_Wheat_Production_1000_tons
+FROM Agri T1
+JOIN TopStates T2 ON T1.`State_Name` = T2.`State_Name`
+JOIN YearRange T3 ON T1.`Year` BETWEEN T3.MinYear AND T3.MaxYear
+GROUP BY T1.`Year`,T1.`State_Name`
+)
+SELECT * FROM AnnualProduction
+ORDER BY 
+`State_Name` ASC,
+`Year` ASC LIMIT 10;
